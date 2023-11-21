@@ -9,10 +9,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2.3.2
 
-      - name: Update Dependencies
-        run: composer update -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-  
-
       - name: Install Dependencies
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
